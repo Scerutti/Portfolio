@@ -1,17 +1,6 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /*
-        Blue: hsl(207, 90%, 61%)
-        Purple: hsl(250, 66%, 75%)
-        Pink: hsl(356, 66%, 75%)
-        Teal: hsl(174, 63%, 62%)
-    */
-
   --hue: 207;
   --sat: 90%;
   --lig: 61%;
@@ -25,8 +14,6 @@
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: #fff;
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
 
   --h2-font-size: 1.25rem;
@@ -35,7 +22,6 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  // Responsive typography
   @media screen and (min-width: 968px) {
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;

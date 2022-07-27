@@ -1,17 +1,6 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /*
-      Blue: hsl(207, 90%, 61%)
-      Purple: hsl(250, 66%, 75%)
-      Pink: hsl(356, 66%, 75%)
-      Teal: hsl(174, 63%, 62%)
-  */
-
   --hue: 207;
   --sat: 90%;
   --lig: 61%;
@@ -24,8 +13,6 @@
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: #fff;
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Poppins', sans-serif;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -43,8 +30,6 @@
     --smaller-font-size: .813rem;
   }
 }
-
-/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -56,7 +41,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s; /* For animation dark mode */
+  transition: .3s;
 }
 
 h1, h2, h3 {
@@ -76,8 +61,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/*=============== THEME ===============*/
 .change-theme {
   position: absolute;
   top: 1.5rem;
@@ -91,19 +74,12 @@ img {
 .change-theme:hover {
   color: var(--first-color);
 }
-
-/*========== Variables Dark theme ==========*/
 body.dark-theme {
   --title-color: hsl(var(--hue), 12%, 95%);
   --text-color: hsl(var(--hue), 12%, 75%);
   --body-color: hsl(var(--hue), 40%, 8%);
   --container-color: hsl(var(--hue), 24%, 12%);
 }
-
-/*========== 
-    Color changes in some parts of 
-    the website, in light theme
-==========*/
 .dark-theme .button__gray {
   background-color: var(--container-color);
 }
@@ -127,8 +103,6 @@ body.dark-theme {
 .dark-theme::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--hue), 8%, 32%);
 }
-
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
   margin-left: 1.5rem;
@@ -139,8 +113,6 @@ body.dark-theme {
   display: grid;
   gap: 1.5rem;
 }
-
-/*=============== PROFILE ===============*/
 .profile {
   position: relative;
   padding-top: 3.5rem;
@@ -244,8 +216,6 @@ body.dark-theme {
 .profile__buttons-small {
   column-gap: .25rem;
 }
-
-/*=============== BUTTONS ===============*/
 .button {
   display: inline-flex;
   align-items: center;
@@ -279,8 +249,6 @@ body.dark-theme {
 .button__gray:hover {
   background-color: var(--text-color-light);
 }
-
-/*=============== FILTERS TABS===============*/
 .filters__content {
   margin: 2rem 0 2.5rem;
   background-color: var(--text-color-lighten);
@@ -309,8 +277,6 @@ body.dark-theme {
 .filters__button:hover {
   background-color: var(--body-color);
 }
-
-/*=============== PROJECTS ===============*/
 .projects__card {
   position: relative;
   border-radius: 1rem;
@@ -358,8 +324,6 @@ body.dark-theme {
 .projects__card:hover .projects__modal {
   bottom: 0;
 }
-
-/*=============== SKILLS ===============*/
 .skills__content {
   row-gap: 3.5rem;
 }
@@ -401,8 +365,6 @@ body.dark-theme {
 .skills__level {
   font-size: var(--smaller-font-size);
 }
-
-/* Hide and show projects & skills */
 .filters [data-content] {
   display: none;
 }
@@ -410,13 +372,9 @@ body.dark-theme {
 .filters__active[data-content] {
   display: grid;
 }
-
-/* Activate button filter */
 .filter-tab-active {
   background-color: var(--body-color);
 }
-
-/*=============== FOOTER ===============*/
 .footer__copy {
   display: block;
   margin: 2.5rem 0 2rem;
@@ -425,7 +383,6 @@ body.dark-theme {
   color: var(--text-color-light);
 }
 
-/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
   border-radius: .5rem;
@@ -441,8 +398,6 @@ body.dark-theme {
   background-color: hsl(var(--hue), 8%, 44%);
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
 @media screen and (max-width: 320px) {
   .container {
     margin-left: 1rem;
@@ -462,7 +417,6 @@ body.dark-theme {
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 576px) {
   .projects__content {
     grid-template-columns: 332px;
@@ -487,7 +441,6 @@ body.dark-theme {
   }
 }
 
-/* For large devices */
 @media screen and (min-width: 992px) {
   .container {
     margin-left: auto;

@@ -3,36 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--=============== FAVICON ===============-->
     <link
       rel="shortcut icon"
       href="assets/img/favicon.ico"
       type="image/x-icon"
     />
-
-    <!--=============== REMIX ICONS ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Sebastián Cerutti Portfolio</title>
   </head>
   <body>
-    <!--=============== HEADER ===============-->
     <header class="profile container">
-      <!-- Theme button -->
       <i class="ri-moon-line change-theme" id="theme-button"></i>
-
       <div class="profile__container grid">
         <div class="profile__data">
           <div class="profile__border">
             <div class="profile__perfil">
-              <!-- Insert your image, according to the example size of the portfolio -->
               <img src="assets/img/perfil.png" alt="" />
             </div>
           </div>
@@ -90,13 +80,10 @@
         </div>
 
         <div class="profile__buttons">
-          <!-- Insert your CV -->
           <a download="" href="assets/pdf/Sebastián_resume.pdf" class="button">
             Download CV <i class="ri-download-line"></i>
           </a>
-
           <div class="profile__buttons-small">
-            <!-- Insert a real number plus country code -->
             <a
               href="https://api.whatsapp.com/send?phone=543434048731&text=Hello, more information!"
               target="_blank"
@@ -104,7 +91,6 @@
             >
               <i class="ri-whatsapp-line"></i>
             </a>
-            <!-- Insert your brand name or profile -->
             <a
               href="https://t.me/sebacerutti"
               target="_blank"
@@ -116,11 +102,8 @@
         </div>
       </div>
     </header>
-
-    <!--=============== MAIN ===============-->
     <main class="main">
       <section class="filters container">
-        <!--=============== FILTERS TABS ===============-->
         <ul class="filters__content">
           <button
             class="filters__button filter-tab-active"
@@ -132,14 +115,12 @@
         </ul>
 
         <div class="filters__sections">
-          <!--=============== PROJECTS ===============-->
           <div
             class="projects__content grid filters__active"
             data-content
             id="projects"
           >
             <article class="projects__card">
-              <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
               <img
                 src="assets/img/dogs-page-home.png"
                 alt=""
@@ -241,8 +222,6 @@
               </div>
             </article> -->
           </div>
-
-          <!--=============== SKILLS ===============-->
           <div class="skills__content grid" data-content id="skills">
             <div class="skills__area">
               <h3 class="skills__title">Frontend Developer</h3>
@@ -381,16 +360,10 @@
         </div>
       </section>
     </main>
-
-    <!--=============== FOOTER ===============-->
     <footer class="footer container">
       <span class="footer__copy"> &#169; Scerutti. All rigths reserved </span>
     </footer>
-
-    <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
