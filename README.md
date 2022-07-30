@@ -29,6 +29,8 @@
 
 - Clone this [repository](https://github.com/Scerutti/Portfolio.git) to your local machine 
 - ```
+  git clone https://github.com/Scerutti/Portfolio.git
+  ```
 
 - Navigate to `cd portfolio` directory.
 
