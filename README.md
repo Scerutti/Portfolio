@@ -29,8 +29,6 @@
 
 - Clone this [repository](https://github.com/Scerutti/Portfolio.git) to your local machine 
 - ```
-  git clone git@github.com:Meri-MG/portfolio---react.git
-  ```
 
 - Navigate to `cd portfolio` directory.
 
