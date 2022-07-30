@@ -37,7 +37,7 @@ const Testimonials = () => {
     {
       id: 4,
       link: 'https://www.linkedin.com/in/engineer-luis-migliore/',
-      name: 'Luis Nicolás Migliore SabadiniLuis Nicolás Migliore Sabadini',
+      name: 'Luis Nicolás Migliore Sabadini',
       role: 'FullStack Developer | JavaScript | NodeJS | React | Redux | PostgreSQL & Structural Engineer',
       test: 'Sebastian, with whom I had the pleasure of studying web programming and developing an E-commerce as part of a team of Full Stack developers, demonstrated and demonstrates daily to have the knowledge and skills necessary to develop with ease in the field of programming.Undoubtedly he brings in every job he does all his technical knowledge and, even more, an impeccable human behavior that, together, make him a complete professional.',
     },
