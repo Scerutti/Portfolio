@@ -46,7 +46,7 @@
 
 ## Author
 
-:men: **Sebastián Cerutti**
+👨  **Sebastián Cerutti**
 
 - [GitHub](https://github.com/Scerutti)
 - [LinkedIn](https://www.linkedin.com/in/cerutti-sebastiáng/)
