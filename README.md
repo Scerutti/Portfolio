@@ -7,11 +7,10 @@
 
 - React
 - CSS
-- VS code
 
 ## Live Demo
 
-- [Live Demo](https://chic-biscochitos-af5267.netlify.app/)
+- [Live Demo](https://portfolio-scerutti.vercel.app)
 
 
 # Getting Started
@@ -28,12 +27,12 @@
 
 - Choose a folder in your local machine where you want this repository to be copied
 
-- Clone this [repository](https://github.com/Meri-MG/portfolio---react) to your local machine 
+- Clone this [repository](https://github.com/Scerutti/Portfolio.git) to your local machine 
 - ```
   git clone git@github.com:Meri-MG/portfolio---react.git
   ```
 
-- Navigate to `cd portfolio---react`  directory.
+- Navigate to `cd portfolio` directory.
 
 - To install all the app dependencies on the command line run
 - ```
@@ -47,17 +46,10 @@
 
 ## Author
 
-:woman: **Meri Gogichashvili**
+:men: **Sebastián Cerutti**
 
-- [GitHub](https://github.com/Meri-MG)
-- [LinkedIn](https://www.linkedin.com/in/meri-gogichashvili/)
-
-## 🤝 Contributing
-- Contributions, issues, and feature requests are welcome!
-- Feel free to check the [issues page](https://github.com/Meri-MG/portfolio---react/issues).
+- [GitHub](https://github.com/Scerutti)
+- [LinkedIn](https://www.linkedin.com/in/cerutti-sebastiáng/)
 
 # Show your support
 Give a ⭐ if you like this project!
-
-# Acknowledgments
-Thanks to [EGATOR](https://www.youtube.com/watch?v=G-Cr00UYokU&list=WL&index=55&t=1845s) tutorial!
