@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-- [Live Demo](https://portfolio-scerutti.vercel.app)
+- [Live Demo](https://sebastiancerutti.tech)
 
 
 # Getting Started
