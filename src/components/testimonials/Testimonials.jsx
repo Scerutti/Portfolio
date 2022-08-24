@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsLinkedin } from 'react-icons/bs';
-import { Pagination } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -48,10 +48,11 @@ const Testimonials = () => {
       <h2>Testimonials</h2>
       <Swiper
         className="container testimonials__container"
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={40}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        autoplay
       >
         {testimonials.map((test) => (
           <SwiperSlide className="testimonial" key={test.id}>
