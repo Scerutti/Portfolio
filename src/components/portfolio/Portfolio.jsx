@@ -3,6 +3,7 @@ import IMG1 from '../../assets/dogs-page-home.png';
 import IMG2 from '../../assets/rick-morty-home.png';
 import IMG3 from '../../assets/ecommerce.png';
 import IMG4 from '../../assets/task-list.png';
+import IMG5 from '../../assets/chuck-norris-jokes.jpeg';
 
 import './portfolio.css';
 
@@ -20,13 +21,13 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Rick & Morty SPA',
-      img: IMG2,
+      title: 'Chuck Norris Jokes',
+      img: IMG5,
       description:
-        'Rick and Morty application that provides information about the characters of this animated series.',
-      technologies: 'React | Redux',
-      link: 'https://rick-and-morty-olive.vercel.app',
-      github: 'https://github.com/Scerutti/Rick-and-Morty',
+        'It is a SPA that generates random jokes consumed from an external API.',
+      technologies: ' TypeScript | React ',
+      link: 'https://chuck-norris-jokes-scerutti.vercel.app',
+      github: 'https://github.com/Scerutti/chuck-norris-jokes',
     },
     {
       id: 3,
@@ -42,11 +43,21 @@ const Portfolio = () => {
       title: 'Task List App',
       img: IMG4,
       description:
-        'Its main purpose is the creation of lists and tasks, the session is saved in the Local Storage which allows the user to save his lists without fear of losing them once the browser is closed.',
+        'A SPA, which allows the user to load tasks, with subtasks. Saving the session in the Local Storage.',
       technologies: ' TypeScript | React | Redux | Node Js',
       link: 'https://todos-list-wine.vercel.app',
       github: 'https://github.com/Scerutti/TaskList-complete',
     },
+    {
+      id: 5,
+      title: 'Rick & Morty SPA',
+      img: IMG2,
+      description:
+        'Rick and Morty application that provides information about the characters of this animated series.',
+      technologies: 'React | Redux',
+      link: 'https://rick-and-morty-olive.vercel.app',
+      github: 'https://github.com/Scerutti/Rick-and-Morty',
+    }
   ];
 
   return (
