@@ -4,6 +4,7 @@ import IMG2 from '../../assets/rick-morty-home.png';
 import IMG3 from '../../assets/ecommerce.png';
 import IMG4 from '../../assets/task-list.png';
 import IMG5 from '../../assets/chuck-norris-jokes.jpeg';
+import IMG6 from '../../assets/rest-api-nestjs.png';
 
 import './portfolio.css';
 
@@ -31,6 +32,16 @@ const Portfolio = () => {
     },
     {
       id: 3,
+      title: 'Rest-API with Nest.JS',
+      img: IMG6,
+      description:
+        'CRUD connected to MongoDB, for creating/reading/updating/deleting products.',
+      technologies: ' TypesCript | Nest.Js | MongoDB',
+      link: '',
+      github: 'https://github.com/Scerutti/rest-api-nest',
+    },
+    {
+      id: 4,
       title: 'E-commerce App',
       img: IMG3,
       description: 'This App is a page dedicated to the purchase of electronic products, which has functionalities such as login, shopping cart, among others.',
@@ -39,7 +50,7 @@ const Portfolio = () => {
       github: 'https://github.com/federicoacuna/soyHenryWebFT23b-G01-PF',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Task List App',
       img: IMG4,
       description:
@@ -49,7 +60,7 @@ const Portfolio = () => {
       github: 'https://github.com/Scerutti/TaskList-complete',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Rick & Morty SPA',
       img: IMG2,
       description:
@@ -85,14 +96,24 @@ const Portfolio = () => {
               >
                 GitHub
               </a>
-              <a
-                href={pro.link}
-                target="_blank"
-                className="btn btn-primary"
-                rel="noreferrer"
-              >
-                Live Demo
-              </a>
+              {
+                !pro.link ?
+                  <a
+                    aria-disabled='true'
+                    className="a-btn-disabled"
+                  >
+                    Live Demo
+                  </a>
+                  :
+                  <a
+                    href={pro.link}
+                    target="_blank"
+                    className="btn btn-primary"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+              }
             </div>
           </article>
         ))}

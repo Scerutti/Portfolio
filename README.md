@@ -53,3 +53,8 @@
 
 # Show your support
 Give a ⭐ if you like this project!
+
+# Donate
+If you want, you can contribute to the growth of a trainee programmer by donating. No strings attached
+
+<a href="https://paypal.me/scrutti?country.x=AR&locale.x=es_XC" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
