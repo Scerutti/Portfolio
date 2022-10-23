@@ -99,6 +99,7 @@ const Portfolio = () => {
               {
                 !pro.link ?
                   <a
+                    href='#portfolio'
                     aria-disabled='true'
                     className="a-btn-disabled"
                   >
