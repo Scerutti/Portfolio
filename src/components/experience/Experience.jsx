@@ -13,7 +13,7 @@ const Experience = () => {
           <div className="experience__content">
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>HTML</h4>
+              <h4>HTML5</h4>
             </article>
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
@@ -35,14 +35,6 @@ const Experience = () => {
               <BsFillPatchCheckFill className="experience__details-icon" />
               <h4>TypeScrypt</h4>
             </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Angular</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Ionic</h4>
-            </article>
           </div>
         </div>
         <div className="experience__backend">
@@ -62,11 +54,15 @@ const Experience = () => {
             </article>
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Firebase</h4>
+              <h4>MongoDB</h4>
+            </article>
+            <article className='experience__details' >
+              <BsFillPatchCheckFill className='experience__details-icon' />
+              <h4>NestJS</h4>
             </article>
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Git/GitHub</h4>
+              <h4>Firebase</h4>
             </article>
           </div>
         </div>
