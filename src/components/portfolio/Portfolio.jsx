@@ -3,6 +3,8 @@ import IMG1 from '../../assets/dogs-page-home.png';
 import IMG2 from '../../assets/rick-morty-home.png';
 import IMG3 from '../../assets/ecommerce.png';
 import IMG4 from '../../assets/task-list.png';
+import IMG5 from '../../assets/chuck-norris-jokes.jpeg';
+import IMG6 from '../../assets/rest-api-nestjs.png';
 
 import './portfolio.css';
 
@@ -20,16 +22,26 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Rick & Morty SPA',
-      img: IMG2,
+      title: 'Chuck Norris Jokes',
+      img: IMG5,
       description:
-        'Rick and Morty application that provides information about the characters of this animated series.',
-      technologies: 'React | Redux',
-      link: 'https://rick-and-morty-olive.vercel.app',
-      github: 'https://github.com/Scerutti/Rick-and-Morty',
+        'It is a SPA that generates random jokes consumed from an external API.',
+      technologies: ' TypeScript | React ',
+      link: 'https://chuck-norris-jokes-scerutti.vercel.app',
+      github: 'https://github.com/Scerutti/chuck-norris-jokes',
     },
     {
       id: 3,
+      title: 'Rest-API with Nest.JS',
+      img: IMG6,
+      description:
+        'CRUD connected to MongoDB, for creating/reading/updating/deleting products.',
+      technologies: ' TypesCript | Nest.Js | MongoDB',
+      link: '',
+      github: 'https://github.com/Scerutti/rest-api-nest',
+    },
+    {
+      id: 4,
       title: 'E-commerce App',
       img: IMG3,
       description: 'This App is a page dedicated to the purchase of electronic products, which has functionalities such as login, shopping cart, among others.',
@@ -38,15 +50,25 @@ const Portfolio = () => {
       github: 'https://github.com/federicoacuna/soyHenryWebFT23b-G01-PF',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Task List App',
       img: IMG4,
       description:
-        'Its main purpose is the creation of lists and tasks, the session is saved in the Local Storage which allows the user to save his lists without fear of losing them once the browser is closed.',
+        'A SPA, which allows the user to load tasks, with subtasks. Saving the session in the Local Storage.',
       technologies: ' TypeScript | React | Redux | Node Js',
       link: 'https://todos-list-wine.vercel.app',
       github: 'https://github.com/Scerutti/TaskList-complete',
     },
+    {
+      id: 6,
+      title: 'Rick & Morty SPA',
+      img: IMG2,
+      description:
+        'Rick and Morty application that provides information about the characters of this animated series.',
+      technologies: 'React | Redux',
+      link: 'https://rick-and-morty-olive.vercel.app',
+      github: 'https://github.com/Scerutti/Rick-and-Morty',
+    }
   ];
 
   return (
@@ -74,14 +96,25 @@ const Portfolio = () => {
               >
                 GitHub
               </a>
-              <a
-                href={pro.link}
-                target="_blank"
-                className="btn btn-primary"
-                rel="noreferrer"
-              >
-                Live Demo
-              </a>
+              {
+                !pro.link ?
+                  <a
+                    href='#portfolio'
+                    aria-disabled='true'
+                    className="a-btn-disabled"
+                  >
+                    Live Demo
+                  </a>
+                  :
+                  <a
+                    href={pro.link}
+                    target="_blank"
+                    className="btn btn-primary"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+              }
             </div>
           </article>
         ))}
