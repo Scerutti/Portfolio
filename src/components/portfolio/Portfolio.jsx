@@ -1,10 +1,10 @@
-import React from 'react';
 import IMG1 from '../../assets/dogs-page-home.png';
 import IMG2 from '../../assets/rick-morty-home.png';
 import IMG3 from '../../assets/ecommerce.png';
 import IMG4 from '../../assets/task-list.png';
 import IMG5 from '../../assets/chuck-norris-jokes.jpeg';
 import IMG6 from '../../assets/rest-api-nestjs.png';
+import IMG7 from '../../assets/weatherBot.png';
 
 import './portfolio.css';
 
@@ -17,18 +17,19 @@ const Portfolio = () => {
       description:
         'Doggies Page is an app that allows you to view a list of dog breeds, sort them, filter them and as an extra feature create one from scratch.',
       technologies: 'React | Redux | Node Js | Express | PostgreSQL',
-      link: 'https://doggies-page.vercel.app',
+      // link: 'https://doggies-page.vercel.app',
+      link: '',
       github: 'https://github.com/Scerutti/Dogs-API-Deployment',
     },
     {
       id: 2,
-      title: 'Chuck Norris Jokes',
-      img: IMG5,
+      title: 'Weather Discord Bot',
+      img: IMG7,
       description:
-        'It is a SPA that generates random jokes consumed from an external API.',
-      technologies: ' TypeScript | React ',
-      link: 'https://chuck-norris-jokes-scerutti.vercel.app',
-      github: 'https://github.com/Scerutti/chuck-norris-jokes',
+        'It is a simple bot that, when you enter a command, responds with the weather of the indicated city.',
+      technologies: ' JavaScript | NodeJs ',
+      link: '',
+      github: 'https://gitlab.com/sebacerutti/weatherbotds',
     },
     {
       id: 3,
@@ -42,15 +43,26 @@ const Portfolio = () => {
     },
     {
       id: 4,
+      title: 'Chuck Norris Jokes',
+      img: IMG5,
+      description:
+        'It is a SPA that generates random jokes consumed from an external API.',
+      technologies: ' TypeScript | React ',
+      link: 'https://chuck-norris-jokes-scerutti.vercel.app',
+      github: 'https://github.com/Scerutti/chuck-norris-jokes',
+    },
+    {
+      id: 5,
       title: 'E-commerce App',
       img: IMG3,
       description: 'This App is a page dedicated to the purchase of electronic products, which has functionalities such as login, shopping cart, among others.',
       technologies: 'JavaScript | Webpack',
-      link: 'https://salchistore.vercel.app',
+      link: '',
+      // link: 'https://salchistore.vercel.app',
       github: 'https://github.com/federicoacuna/soyHenryWebFT23b-G01-PF',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Task List App',
       img: IMG4,
       description:
@@ -60,7 +72,7 @@ const Portfolio = () => {
       github: 'https://github.com/Scerutti/TaskList-complete',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Rick & Morty SPA',
       img: IMG2,
       description:
