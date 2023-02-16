@@ -27,7 +27,7 @@
 
 - Choose a folder in your local machine where you want this repository to be copied
 
-- Clone this [repository](https://github.com/Scerutti/Portfolio.git) to your local machine 
+- Clone or Fork this [repository](https://github.com/Scerutti/Portfolio.git) to your local machine 
 - ```
   git clone https://github.com/Scerutti/Portfolio.git
   ```
