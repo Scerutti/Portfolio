@@ -111,9 +111,9 @@ const Portfolio = () => {
               {
                 !pro.link ?
                   <a
-                    href='#portfolio'
-                    aria-disabled='true'
-                    className="a-btn-disabled"
+                    href={'/error'}
+                    // aria-disabled='true'
+                    className="btn btn-primary"
                   >
                     Live Demo
                   </a>
