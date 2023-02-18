@@ -1,7 +1,7 @@
 import React from 'react';
 import CV from '../../assets/cv.pdf';
 
-const CTA = () => {
+const CTA: React.FC = () => {
   return (
     <div className="cta">
       <a href={CV} download className="btn">Download CV</a>

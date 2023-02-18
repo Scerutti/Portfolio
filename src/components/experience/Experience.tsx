@@ -2,7 +2,7 @@ import React from 'react';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
 import './experience.css';
 
-const Experience = () => {
+const Experience: React.FC = () => {
   return (
     <section id="experience">
       <h5>The Skills I Have</h5>

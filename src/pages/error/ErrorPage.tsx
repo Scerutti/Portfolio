@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography, Button, Container, Grid } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
 
-const ErrorPage = () => {
+const ErrorPage: React.FC = () => {
     return (
         <Container maxWidth="sm">
             <Box textAlign="center" mt={10}>

@@ -4,7 +4,7 @@ import { VscFolderLibrary } from 'react-icons/vsc';
 import ME from '../../assets/me.jpg';
 import './intro.css';
 
-const Intro = () => {
+const Intro: React.FC = () => {
   return (
     <section id="about">
       <h5>Get to know</h5>
