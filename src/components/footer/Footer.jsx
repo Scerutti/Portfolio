@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa'
 import './footer.css';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer>
       <a href="#home" className="footer__logo">Seba Cerutti</a>

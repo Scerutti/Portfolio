@@ -3,7 +3,7 @@ import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa'
 
-const HeaderSocials: React.FC = () => {
+const HeaderSocials = () => {
   return (
     <div className="header__socials">
       <a href="https://www.linkedin.com/in/cerutti-sebastiáng/" target="_blank" rel="noreferrer" ><BsLinkedin /></a>

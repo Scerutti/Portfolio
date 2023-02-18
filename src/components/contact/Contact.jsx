@@ -5,12 +5,11 @@ import './contact.css';
 
 const Contact = () => {
   const [message, setMessage] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const formRef = useRef();
+  const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
-    formRef.current && emailjs
+    emailjs
       .sendForm(
         'service_yylr2rn',
         'template_th8zk3c',
@@ -25,9 +24,9 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-    e.currentTarget.reset();
-  };
 
+    e.target.reset();
+  };
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -60,7 +59,7 @@ const Contact = () => {
           />
           <textarea
             placeholder="Your message"
-            rows={7}
+            rows="7"
             name="message"
             required
           ></textarea>

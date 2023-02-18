@@ -3,7 +3,7 @@ import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
 import './header.css';
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header id="home">
       <div className="container header__container">
