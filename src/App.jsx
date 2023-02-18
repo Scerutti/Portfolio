@@ -1,26 +1,19 @@
 import React from 'react';
-import Contact from './components/contact/Contact';
-import Experience from './components/experience/Experience';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import Intro from './components/intro/Intro';
-import Portfolio from './components/portfolio/Portfolio';
-import Testimonials from './components/testimonials/Testimonials';
-import Topbar from './components/topbar/Topbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CompletePage from './pages/complete-page/CompletePage';
+import Error from './pages/error/Error';
+import ErrorPage from './pages/error/ErrorPage';
 
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <Topbar />
-      <Intro />
-      <Experience />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<CompletePage />} />
+        <Route exact path='/error' element={<Error />} />
+        <Route exact path='/*' element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
