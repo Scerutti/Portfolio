@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
 import './experience.css';
+import { FrontEndExperience, BackEndExperience } from './FullDataExp';
 
 const Experience = () => {
   return (
@@ -11,55 +12,27 @@ const Experience = () => {
         <div className="experience__frontend">
           <h3>Front-end Development</h3>
           <div className="experience__content">
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>HTML5</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>CSS</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>JavaScript</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>React</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Redux</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>TypeScrypt</h4>
-            </article>
+            {
+              FrontEndExperience.map((front) => (
+                <article className="experience__details" key={front.id}>
+                  <BsFillPatchCheckFill className="experience__details-icon" />
+                  <h4>{front.name}</h4>
+                </article>
+              ))
+            }
           </div>
         </div>
         <div className="experience__backend">
           <h3>Back-end Development</h3>
           <div className="experience__content">
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Node Js</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>NestJs</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>PostgreSQL</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Firebase</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>MongoDB</h4>
-            </article>
+            {
+              BackEndExperience.map((back) => (
+                <article className="experience__details" key={back.id}>
+                  <BsFillPatchCheckFill className="experience__details-icon" />
+                  <h4>{back.name}</h4>
+                </article>
+              ))
+            }
           </div>
         </div>
       </div>
