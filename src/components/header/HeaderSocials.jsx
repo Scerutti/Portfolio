@@ -1,14 +1,29 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { BsLinkedin } from 'react-icons/bs';
-import { FaGithub } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa'
-
+import { useDispatch, useSelector } from 'react-redux';
+import { changeLenguage } from '../../redux/actions/index'
+import { SocialsLinks } from './FullDataSocials';
 const HeaderSocials = () => {
+  const dispatch = useDispatch();
+  const lenguage = useSelector(state => state.lenguage);
+
+  const handleLanguageChange = (e) => {
+    console.log('entre')
+    if (e === 'ENG') {
+      dispatch(changeLenguage(true))
+    } else {
+      dispatch(changeLenguage(false))
+    }
+  };
+
   return (
     <div className="header__socials">
-      <a href="https://www.linkedin.com/in/cerutti-sebastiáng/" target="_blank" rel="noreferrer" ><BsLinkedin /></a>
-      <a href="https://github.com/Scerutti" target="_blank" rel="noreferrer" ><FaGithub /></a>
-      <a href="https://www.instagram.com/sebacrtt/" target="_blank" rel="noreferrer" ><FaInstagram /></a>
+      <a href='#' onClick={(e) => handleLanguageChange(e.target.outerText)} title={!lenguage ? "Change Lenguage" : "Cambiar idioma"}>{!lenguage ? 'ENG' : 'ESP'}</a>
+      {
+        SocialsLinks.map((social, index) => (
+          <a href={social.link} target="_blank" rel='noreferrer' key={index + 123} title={social.title}>{social.icon}</a>
+        ))
+      }
     </div>
   )
 }
