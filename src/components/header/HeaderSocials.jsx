@@ -8,7 +8,6 @@ const HeaderSocials = () => {
   const lenguage = useSelector(state => state.lenguage);
 
   const handleLanguageChange = (e) => {
-    console.log('entre')
     if (e === 'ENG') {
       dispatch(changeLenguage(true))
     } else {
