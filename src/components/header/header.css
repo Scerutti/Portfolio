@@ -58,8 +58,11 @@ header {
     height: 35vh;
   }
 
-  .header__socials,
+  .header__socials {
+    left: 1rem;
+  }
+
   .scroll__down {
-    display: none;
+    right: 1rem;
   }
 }
