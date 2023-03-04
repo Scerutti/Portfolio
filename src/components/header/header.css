@@ -45,7 +45,7 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-    height: 68vh;
+    height: 30vh;
   }
 
   section {
@@ -55,7 +55,7 @@ header {
 
 @media screen and (max-width: 600px) {
   header {
-    height: 45vh;
+    height: 30vh;
   }
 
   .header__socials,
