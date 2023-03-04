@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineUser } from 'react-icons/ai';
 import { BiBook } from 'react-icons/bi';
 import { RiServiceLine } from 'react-icons/ri';
 import { BiMessageSquareDetail } from 'react-icons/bi';
 import { BiAlignJustify } from "react-icons/bi"
-
 import './topbar.css';
-import './topbar.css';
-import { useEffect } from 'react';
 
 const Topbar = () => {
   const [activeNav, setActiveNav] = useState('#home');
