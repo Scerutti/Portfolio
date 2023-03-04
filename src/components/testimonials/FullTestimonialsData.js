@@ -34,6 +34,13 @@ export const testimonialsENG = [
         role: 'Full-Stack web developer | JavaScript | Typescript | HTML | CSS | React | Redux | Node | Express | Sequelize & SQL',
         test: "Sebastian is a friend of many years ago, life crossed us again in the IT world, I had the opportunity to learn a lot from him, until today many teachings that he gave me were key to face the obstacles that I was running into along my course in 'Soy Henry'. I am still learning from him and I can say with total security that he is an excellent professional, nowadays wherever I go I always ask for Seba's advice or opinion.",
     },
+    {
+        id: 5,
+        link: 'https://www.linkedin.com/in/salvador-armanasco-catalin/',
+        name: 'Salvador Armanasco Catalin',
+        role: 'Full Stack Developer| React | Redux | Javascript | PostgresSQL | Sequelize | NodeJs | Express | MaterialUI | React Native | Typescript',
+        test: "Seba was the person who helped me in my process of starting to study full-stack web development! He was very patient with me even though we had never met before and had never established a relationship. Today I was able to advance much better and faster thanks to his help. I recommend him 100% as a teammate without a doubt!",
+    },
 ];
 
 export const testimonialsESP = [
@@ -71,5 +78,12 @@ export const testimonialsESP = [
         name: 'Santiago Bonetto',
         role: 'Full-Stack web developer | JavaScript | Typescript | HTML | CSS | React | Redux | Node | Express | Sequelize & SQL',
         test: "Sebastián es un amigo de hace muchísimos años, la vida nos volvió a cruzar en el mundo IT, tuve la oportunidad de aprender mucho de él, hasta hoy en día muchas enseñanzas que me brindo me fueron clave para afrontar los obstáculos que me iba topando a lo largo de mi cursada en 'Soy henry'. Todavía sigo aprendiendo de él y puedo decir con total seguridad que es un excelente profesional, hoy en día a donde vaya siempre pido un consejo u opinión de Seba.",
+    },
+    {
+        id: 5,
+        link: 'https://www.linkedin.com/in/salvador-armanasco-catalin/',
+        name: 'Salvador Armanasco Catalin',
+        role: 'Full Stack Developer| React | Redux | Javascript | PostgresSQL | Sequelize | NodeJs | Express | MaterialUI | React Native | Typescript',
+        test: "Seba fue la persona que me ayudo en mi proceso de comenzar a estudiar desarrollo web full-stack! me tuvo muchísima paciencia a pesar de que hasta ese momento no nos conocíamos ni habíamos entablado una relacion. Hoy por hoy pude avanzar mucho mejor y mas rápido gracias a su ayuda. Lo reocomiendo al 100% como compañero de equipo sin dudas!",
     },
 ];
