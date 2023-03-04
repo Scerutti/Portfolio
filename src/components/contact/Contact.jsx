@@ -21,11 +21,10 @@ const Contact = () => {
         'tE17ckht2NDLED0-H'
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        (_result) => {
         },
         (error) => {
-          console.log(error.text);
+          console.error(error.text);
         }
       );
     e.target.reset();
