@@ -24,8 +24,8 @@ const Experience = () => {
           <h3>Front-end Development</h3>
           <div className="experience__content">
             {
-              FrontEndExperience.map((front) => (
-                <article className="experience__details" key={front.id}>
+              FrontEndExperience.map((front, index) => (
+                <article className="experience__details" key={`frontid${front.id}-index${index}-name${front.name}`}>
                   <BsFillPatchCheckFill className="experience__details-icon" />
                   <h4>{front.name}</h4>
                 </article>
@@ -37,8 +37,8 @@ const Experience = () => {
           <h3>Back-end Development</h3>
           <div className="experience__content">
             {
-              BackEndExperience.map((back) => (
-                <article className="experience__details" key={back.id}>
+              BackEndExperience.map((back, index) => (
+                <article className="experience__details" key={`back-${back.id}-${index}`}>
                   <BsFillPatchCheckFill className="experience__details-icon" />
                   <h4>{back.name}</h4>
                 </article>

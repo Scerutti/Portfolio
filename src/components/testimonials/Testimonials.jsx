@@ -33,8 +33,8 @@ const Testimonials = () => {
               disableOnInteraction: false,
             }}
           >
-            {testimonialsENG.map((test) => (
-              <SwiperSlide className="testimonial" key={test.id}>
+            {testimonialsENG.map((test, index) => (
+              <SwiperSlide className="testimonial" key={`${index}${test.id}${lenguage}`}>
                 <div className="client__avatar">
                   <a href={test.link} target='_blanck'>
                     <BsLinkedin />
@@ -63,8 +63,8 @@ const Testimonials = () => {
               disableOnInteraction: false,
             }}
           >
-            {testimonialsESP.map((test) => (
-              <SwiperSlide className="testimonial" key={test.id}>
+            {testimonialsESP.map((test, index) => (
+              <SwiperSlide className="testimonial" key={`${index}${test.id}${lenguage}`}>
                 <div className="client__avatar">
                   <a href={test.link} target='_blanck'>
                     <BsLinkedin />

@@ -4,23 +4,23 @@ export const FrontEndExperience = [
         name: "HTML5"
     },
     {
-        id: 1,
+        id: 2,
         name: "CSS"
     },
     {
-        id: 1,
+        id: 3,
         name: "JavaScript"
     },
     {
-        id: 1,
+        id: 4,
         name: "React"
     },
     {
-        id: 1,
+        id: 5,
         name: "Redux"
     },
     {
-        id: 1,
+        id: 6,
         name: "TypeScript"
     }
 ]
@@ -31,19 +31,19 @@ export const BackEndExperience = [
         name: "NodeJs"
     },
     {
-        id: 1,
+        id: 2,
         name: "NestJs"
     },
     {
-        id: 1,
+        id: 3,
         name: "PostgreSQL"
     },
     {
-        id: 1,
+        id: 4,
         name: "Firebase"
     },
     {
-        id: 1,
+        id: 5,
         name: "MongoDB"
     }
 ]
