@@ -66,3 +66,17 @@ header {
     right: 1rem;
   }
 }
+
+@media screen and (max-width: 500px) {
+  header {
+    height: 37vh;
+  }
+
+  .header__socials {
+    left: -0.75rem;
+  }
+
+  .scroll__down {
+    right: -0.75rem;
+  }
+}
