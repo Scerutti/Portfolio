@@ -1,0 +1,15 @@
+{
+    "short_name": "DOGGIES",
+    "name": "Doggies page",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/public",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+}

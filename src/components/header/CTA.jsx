@@ -9,12 +9,12 @@ const CTA = () => {
       {
         !lenguage ?
           <div className="cta">
-            <a href={CV} download className="btn">Download CV</a>
+            <a href={CV} download="CurriculumVitae.pdf" className="btn">Download CV</a>
             <a href="#contact" className="btn btn-primary">Let's talk</a>
           </div>
           :
           <div className="cta">
-            <a href={CV} download className="btn">Descargar CV</a>
+            <a href={CV} download="CurriculumVitae.pdf" className="btn">Descargar CV</a>
             <a href="#contact" className="btn btn-primary">Contáctame</a>
           </div>
       }
