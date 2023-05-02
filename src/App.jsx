@@ -9,9 +9,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<CompletePage />} />
-        <Route exact path='/error' element={<Error />} />
-        <Route exact path='/*' element={<ErrorPage />} />
+        <Route path="/" element={<CompletePage />} />
+        <Route path='/error' element={<Error />} />
+        <Route path='/*' element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   )
