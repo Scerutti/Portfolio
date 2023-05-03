@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineUser } from 'react-icons/ai';
 import { BiBook } from 'react-icons/bi';
@@ -8,22 +8,20 @@ import { BiAlignJustify } from "react-icons/bi"
 import './topbar.css';
 
 const Topbar = () => {
-  const [activeNav, setActiveNav] = useState('#home');
+  const [activeNav, setActiveNav] = React.useState('#home');
 
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
-      // eslint-disable-next-line no-unused-vars
-      const home = document.querySelector("#home");
-      const about = document.querySelector("#about");
-      const experience = document.querySelector("#experience");
-      const portfolio = document.querySelector("#portfolio");
-      const testimonials = document.querySelector("#testimonials");
-      const contact = document.querySelector("#contact");
+      const about = document.querySelector("#about") as HTMLElement;
+      const experience = document.querySelector("#experience") as HTMLElement;
+      const portfolio = document.querySelector("#portfolio") as HTMLElement;
+      const testimonials = document.querySelector("#testimonials") as HTMLElement;
+      const contact = document.querySelector("#contact") as HTMLElement;
 
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop < about.offsetTop) {
+      if ( scrollTop < about.offsetTop) {
         setActiveNav('#home');
       } else if (scrollTop >= about.offsetTop && scrollTop < experience.offsetTop) {
         setActiveNav('#about');
