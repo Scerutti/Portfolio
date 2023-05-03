@@ -5,13 +5,13 @@ import Error from './pages/error/Error';
 import ErrorPage from './pages/error/ErrorPage';
 
 
-const App = () => {
+const App:React.FC<{}> = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<CompletePage />} />
-        <Route exact path='/error' element={<Error />} />
-        <Route exact path='/*' element={<ErrorPage />} />
+        <Route path="/" element={<CompletePage />} />
+        <Route path='/error' element={<Error />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   )
