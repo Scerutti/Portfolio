@@ -1,4 +1,20 @@
-export const FrontEndExperience = [
+interface ExperienceDTO {
+    id: number;
+    name: string;
+}
+
+interface ExperienceDataDTO{
+    title:{
+        en: string;
+        es: string;
+    };
+    subtitle:{
+        en: string;
+        es: string;
+    };
+}
+
+const FrontEndExperience: ExperienceDTO[] = [
     {
         id: 1,
         name: "HTML5"
@@ -25,7 +41,7 @@ export const FrontEndExperience = [
     }
 ]
 
-export const BackEndExperience = [
+const BackEndExperience: ExperienceDTO[] = [
     {
         id: 1,
         name: "NodeJs"
@@ -47,3 +63,20 @@ export const BackEndExperience = [
         name: "MongoDB"
     }
 ]
+
+const ExperienceData: ExperienceDataDTO = {
+    title:{
+        en: "The Skills I Have",
+        es: "Mis",
+    },
+    subtitle:{
+        en: "Skills",
+        es: "Habilidades",
+    },
+}
+
+export {
+    FrontEndExperience,
+    BackEndExperience,
+    ExperienceData
+}

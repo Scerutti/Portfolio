@@ -1,19 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import emailjs from '@emailjs/browser';
 import { MdOutlineEmail } from 'react-icons/md';
 import './contact.css';
 import { useSelector } from 'react-redux';
+import { LenguageState } from '../../redux/reducer/types';
 
 const Contact = () => {
-  const lenguage = useSelector(state => state.lenguage);
-  const [message, setMessage] = useState(false);
+  const lenguage = useSelector((state: LenguageState) => state.lenguage);
+  const [message, setMessage] = React.useState(false);
 
+  const formRef = React.useRef();
 
-  const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
-    emailjs
+    if(formRef.current){
+      emailjs
       .sendForm(
         'service_yylr2rn',
         'template_th8zk3c',
@@ -27,6 +29,7 @@ const Contact = () => {
           console.error(error.text);
         }
       );
+    }
     e.target.reset();
   };
 
