@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux';
 import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
-import './header.css';
 import { HeaderData } from './HeaderData';
 import { LenguageState } from '../../redux/reducer/types';
+
+import './header.css';
 
 const Header = () => {
   const lenguage = useSelector((state: LenguageState) => state.lenguage);
