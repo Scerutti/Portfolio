@@ -4,14 +4,15 @@ import { MdOutlineEmail } from 'react-icons/md';
 import './contact.css';
 import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
+import ContactData from './ContactData';
 
 const Contact = () => {
   const lenguage = useSelector((state: LenguageState) => state.lenguage);
   const [message, setMessage] = React.useState(false);
 
-  const formRef = React.useRef();
+  const formRef = React.useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessage(true);
     if(formRef.current){
@@ -30,26 +31,21 @@ const Contact = () => {
         }
       );
     }
-    e.target.reset();
+    e.currentTarget.reset();
   };
 
   return (
-    <>
-      {!lenguage ?
         <section id="contact">
-          <h5>Get In Touch</h5>
-          <h5>
-            I do receive your messages and will respond asap if the valid email is
-            provided 😁
-          </h5>
-          <h2>Contact Me</h2>
+          <h5>{lenguage ? ContactData.title.es : ContactData.title.en}</h5>
+          <h5>{lenguage ? ContactData.caption.es : ContactData.caption.en}</h5>
+          <h2>{lenguage ? ContactData.subtitle.es : ContactData.subtitle.en}</h2>
           <div className="container contact__container">
             <div className="contact__options">
               <article className="contact__option">
                 <MdOutlineEmail className="contact__option-icon" />
                 <h4>Email</h4>
-                <h5>softsys95@gmail.com</h5>
-                <a href="mailto:softsys95@gmail.com">Send a message</a>
+                <h5>{ContactData.mail}</h5>
+                <a href={`mailto:${ContactData.mail}`}>{lenguage ? ContactData.button.es : ContactData.button.en}</a>
               </article>
             </div>
             <form ref={formRef} onSubmit={handleSubmit}>
@@ -67,61 +63,17 @@ const Contact = () => {
               />
               <textarea
                 placeholder="Your message"
-                rows="7"
+                rows={7}
                 name="message"
                 required
               ></textarea>
               <button type="submit" className="btn btn-primary">
-                Send Message
+                {lenguage ? ContactData.button.es : ContactData.button.en}
               </button>
-              {message && <span>Thanks, I'll reply ASAP 😁</span>}
+              {message && <span>{lenguage ? ContactData.thanks.es : ContactData.thanks.en}</span>}
             </form>
           </div>
         </section>
-        :
-        <section id="contact">
-          <h5>Póngase en contacto</h5>
-          <h5>
-            Recibo sus mensajes y responderé lo antes posible si el correo electrónico válido es proporcionado 😁
-          </h5>
-          <h2>Contáctame</h2>
-          <div className="container contact__container">
-            <div className="contact__options">
-              <article className="contact__option">
-                <MdOutlineEmail className="contact__option-icon" />
-                <h4>Email</h4>
-                <h5>softsys95@gmail.com</h5>
-                <a href="mailto:softsys95@gmail.com">Enviar mensaje</a>
-              </article>
-            </div>
-            <form ref={formRef} onSubmit={handleSubmit}>
-              <input
-                type="text"
-                placeholder="Nombre Completo"
-                name="user_name"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Tu Email"
-                name="user_email"
-                required
-              />
-              <textarea
-                placeholder="Tu mensaje"
-                rows="7"
-                name="message"
-                required
-              ></textarea>
-              <button type="submit" className="btn btn-primary">
-                Enviar mensaje
-              </button>
-              {message && <span>Gracias, responderé lo antes posible 😁</span>}
-            </form>
-          </div>
-        </section>
-      }
-    </>
   );
 };
 
