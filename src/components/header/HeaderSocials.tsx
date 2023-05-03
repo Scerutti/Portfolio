@@ -20,7 +20,9 @@ const HeaderSocials = () => {
       <a href='#' onClick={(e) => handleLanguageChange(e.currentTarget.outerText)} title={!lenguage ? "Change Lenguage" : "Cambiar idioma"}>{!lenguage ? 'ESP' : 'ENG'}</a>
       {
         SocialsLinks.map((social, index) => (
-          <a href={social.link} target="_blank" rel='noreferrer' key={index + 123} title={social.title}>{social.icon}</a>
+          <a href={social.link} target="_blank" rel='noreferrer' key={index + 123} title={social.title}>
+            {social.icon}
+          </a>
         ))
       }
     </div>
