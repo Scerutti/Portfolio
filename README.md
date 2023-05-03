@@ -6,6 +6,7 @@
 ## Built With
 
 - React
+- TypeScript
 - CSS
 
 ## Live Demo
