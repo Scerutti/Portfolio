@@ -3,7 +3,7 @@ import { FaAward } from 'react-icons/fa';
 import { VscFolderLibrary } from 'react-icons/vsc';
 import { AboutContent } from "./AboutContent"
 import { LenguageState } from '../../redux/reducer/types';
-const ME = require("../../assets/me.png")
+import  ME from "../../assets/me.png";
 
 import './intro.css';
 

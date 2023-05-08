@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
 import { HeaderData } from './HeaderData';
 
-const CV = require('../../assets/cv.pdf');
+import CV from "../../assets/cv.pdf"
 
 const CTA = () => {
   const lenguage = useSelector((state: LenguageState) => state.lenguage);
