@@ -9,6 +9,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -21,7 +22,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "src",

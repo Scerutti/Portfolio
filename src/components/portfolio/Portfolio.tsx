@@ -32,7 +32,7 @@ const Portfolio = () => {
                   </a>
                   <a
                     href={project.link ? project.link : "/error" }
-                    target="_blank"
+                    target={project.link ? "_blank" : undefined}
                     className="btn btn-primary"
                     rel="noreferrer"
                   >

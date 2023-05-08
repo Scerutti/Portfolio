@@ -1,10 +1,10 @@
-const IMG1 = require('../../assets/dogs-page-home.png');
-const IMG2 = require('../../assets/rick-morty-home.png');
-const IMG3 = require('../../assets/ecommerce.png');
-const IMG4 = require('../../assets/task-list.png');
-const IMG5 = require('../../assets/chuck-norris-jokes.png');
-const IMG6 = require('../../assets/rest-api-nestjs.png');
-const IMG7 = require('../../assets/weatherBot.png');
+import IMG1 from'../../assets/dogs-page-home.png';
+import IMG2 from'../../assets/rick-morty-home.png';
+import IMG3 from'../../assets/ecommerce.png';
+import IMG4 from'../../assets/task-list.png';
+import IMG5 from'../../assets/chuck-norris-jokes.png';
+import IMG6 from'../../assets/rest-api-nestjs.png';
+import IMG7 from'../../assets/weatherBot.png';
 
 interface PryectsDTO {
     id: number;
