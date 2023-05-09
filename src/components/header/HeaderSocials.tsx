@@ -1,9 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLenguage } from '../../redux/actions/index'
 import { LenguageState } from '../../redux/reducer/types';
+import { IconType } from "react-icons"
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa'
+import { SocialsLinks } from './FullDataSocials';
+
+const iconMap: Record<string, IconType> = {
+  Github: FaGithub,
+  Linkedin: BsLinkedin,
+  Instagram: FaInstagram,
+}
 
 const HeaderSocials = () => {
   const dispatch = useDispatch();
@@ -17,23 +25,10 @@ const HeaderSocials = () => {
     }
   };
 
-  const SocialsLinks = [
-    {
-      link: "https://www.linkedin.com/in/cerutti-sebastiáng/",
-      icon: <BsLinkedin />,
-      title: "LinkedIn"
-    },
-    {
-      link: "https://github.com/Scerutti",
-      icon: <FaGithub />,
-      title: "Github"
-    },
-    {
-      link: "https://www.instagram.com/sebacrtt/",
-      icon: <FaInstagram />,
-      title: 'Instagram'
-    },
-  ]
+  const getIcon = (icon: string): JSX.Element | undefined => {
+    const IconComponent = iconMap[icon];
+    return IconComponent ? <IconComponent /> : undefined;
+  };
 
 
   return (
@@ -42,7 +37,7 @@ const HeaderSocials = () => {
       {
         SocialsLinks.map((social, index) => (
           <a href={social.link} target="_blank" rel='noreferrer' key={index + 123} title={social.title}>
-            {social.icon}
+            {getIcon(social.icon)}
           </a>
         ))
       }
