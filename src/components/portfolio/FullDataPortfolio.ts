@@ -5,6 +5,7 @@ import IMG4 from'../../assets/task-list.png';
 import IMG5 from'../../assets/chuck-norris-jokes.png';
 import IMG6 from'../../assets/rest-api-nestjs.png';
 import IMG7 from'../../assets/weatherBot.png';
+import IMG8 from '../../assets/formulario-taller.png'
 
 interface PryectsDTO {
     id: number;
@@ -45,6 +46,18 @@ export const SoloProjects: PryectsDTO[] = [
     },
     {
         id: 2,
+        title: 'Formulario taller',
+        img: IMG8,
+        description:{
+            en: 'It is a project for a group from the faculty of health sciences, for the Environmental Health career.',
+            es: 'Es un proyecto para un grupo de la facultad de ciencias de la salud, para la carrera de Salud Ambiental',
+        },
+        technologies: 'ReactJs | TypeScript | Material UI',
+        github: 'https://github.com/Scerutti/taller-invitation-form',
+        link: "https://invitacion-one.vercel.app/"
+    },
+    {
+        id: 3,
         title: 'Weather Discord Bot',
         img: IMG7,
         description:{
@@ -55,7 +68,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://gitlab.com/sebacerutti/weatherbotds',
     },
     {
-        id: 3,
+        id: 4,
         title: 'Rest-API with Nest.JS',
         img: IMG6,
         description:{
@@ -66,7 +79,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/rest-api-nest',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Chuck Norris Jokes',
         img: IMG5,
         description:{
@@ -78,7 +91,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/chuck-norris-jokes',
     },
     {
-        id: 5,
+        id: 6,
         title: 'E-commerce App',
         img: IMG3,
         description:{
@@ -89,7 +102,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/federicoacuna/soyHenryWebFT23b-G01-PF',
     },
     {
-        id: 6,
+        id: 7,
         title: 'Task List App',
         img: IMG4,
         description:{
@@ -101,7 +114,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/TaskList-complete',
     },
     {
-        id: 7,
+        id: 8,
         title: 'Rick & Morty SPA',
         img: IMG2,
         description:{
