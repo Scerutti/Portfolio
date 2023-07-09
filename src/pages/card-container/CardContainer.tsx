@@ -1,10 +1,11 @@
-import { Grid, Button, CardMedia, Typography, makeStyles, IconButton } from '@material-ui/core'
+import { Grid, Button, Typography, makeStyles, IconButton } from '@material-ui/core'
 import React from 'react'
-import { ProyectoDTO, portfolioData, soloProjects } from '../../components/portfolio/FullDataPortfolio';
+import { portfolioData, soloProjects } from '../../components/portfolio/FullDataPortfolio';
 import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
 import { useNavigate, useParams } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { ProyectoDTO } from '../../shared/interfaces';
 
 
 
@@ -46,7 +47,7 @@ const useCardContainerStyle = makeStyles((theme) => ({
 
 interface CardsContainerProps {}
 
-const CardContainer: React.FC<CardsContainerProps> = (props: CardsContainerProps) => {
+const CardContainer: React.FC<CardsContainerProps> = (_props: CardsContainerProps) => {
     const lenguage = useSelector((state: LenguageState) => state.lenguage);
     const classes = useCardContainerStyle();
     const navigate = useNavigate();

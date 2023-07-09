@@ -6,35 +6,7 @@ import IMG5 from'../../assets/chuck-norris-jokes.png';
 import IMG6 from'../../assets/rest-api-nestjs.png';
 import IMG7 from'../../assets/weatherBot.png';
 import IMG8 from '../../assets/formulario-taller.png'
-
-export interface ProyectoDTO {
-    id: string;
-    title: string;
-    img: string;
-    description:{
-        en: string;
-        es: string;
-    };
-    technologies:string;
-    link?: string;
-    github: string;
-}
-
-export interface PortfolioDataDTO {
-    title:{
-        en: string;
-        es: string;
-    };
-    subtitle: string;
-    button:{
-        en: string;
-        es: string;
-    };
-    verMas:{
-        en: string;
-        es: string;
-    };
-}
+import { PortfolioDataDTO, ProyectoDTO } from '../../shared/interfaces';
 
 export const soloProjects: ProyectoDTO[] = [
     {

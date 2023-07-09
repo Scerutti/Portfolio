@@ -1,28 +1,6 @@
-interface ContactDataDTO{
-    title: {
-        en: string;
-        es: string;
-    };
-    caption:{
-        en: string;
-        es: string;
-    };
-    subtitle: {
-        en: string;
-        es: string;
-    };
-    mail: string;
-    button:{
-        en: string;
-        es: string;
-    };
-    thanks:{
-        en: string;
-        es: string;
-    };
-}
+import { ContactDataDTO } from "../../shared/interfaces";
 
-const ContactData: ContactDataDTO = {
+const contactData: ContactDataDTO = {
     title:{
         en: "Get In Touch",
         es: "Póngase en contacto",
@@ -46,4 +24,4 @@ const ContactData: ContactDataDTO = {
     }
 }
 
-export default ContactData;
+export default contactData;

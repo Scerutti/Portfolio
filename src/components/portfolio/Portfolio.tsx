@@ -2,7 +2,7 @@ import './portfolio.css';
 import { portfolioData, soloProjects } from './FullDataPortfolio';
 import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 

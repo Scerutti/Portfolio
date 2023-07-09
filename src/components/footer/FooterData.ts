@@ -1,32 +1,7 @@
-interface FooterDataDTO {
-    home: {
-        en: string;
-        es: string;
-    };
-    about: {
-        en: string;
-        es: string;
-    };
-    experience: {
-        en: string;
-        es: string;
-    };
-    portfolio: string;
-    recomendations: {
-        en: string;
-        es: string;
-    };
-    contact: {
-        en: string;
-        es: string;
-    };
-    copyright: {
-        en: string;
-        es: string;
-    };
-}
+import { FooterDataDTO } from "../../shared/interfaces";
 
-const FooterData: FooterDataDTO = {
+
+const footerData: FooterDataDTO = {
     home:{
         en: "Home",
         es: "Inicio"
@@ -54,4 +29,4 @@ const FooterData: FooterDataDTO = {
     }
 }
 
-export default FooterData;
+export default footerData;

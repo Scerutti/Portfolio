@@ -1,26 +1,6 @@
-interface TestimonialsDTO {
-    id: number;
-    link: string;
-    name: string;
-    role: string;
-    test:{
-        en: string;
-        es: string;
-    };
-}
+import { TestimonialDataDTO, TestimonialsDTO } from "../../shared/interfaces";
 
-interface TestimonialDataDTO {
-    title: {
-        en: string;
-        es: string;
-    };
-    subtitle: {
-        en: string;
-        es: string;
-    }
-}
-
-const Testimonials: TestimonialsDTO[] = [
+const testimonials: TestimonialsDTO[] = [
     {
         id: 1,
         link: 'https://www.linkedin.com/in/emanuelsaucedo/',
@@ -83,7 +63,7 @@ const Testimonials: TestimonialsDTO[] = [
     },
 ];
 
-const TestimonialData: TestimonialDataDTO = {
+const testimonialData: TestimonialDataDTO = {
     title: {
         en: "Feedback from my peers",
         es: "Opinión de mis compañeros",
@@ -95,6 +75,6 @@ const TestimonialData: TestimonialDataDTO = {
 }
 
 export {
-    Testimonials,
-    TestimonialData
+    testimonials,
+    testimonialData
 }
