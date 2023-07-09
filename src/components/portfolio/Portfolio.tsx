@@ -1,45 +1,50 @@
 import './portfolio.css';
-import { PortfolioData, SoloProjects } from './FullDataPortfolio';
+import { portfolioData, soloProjects } from './FullDataPortfolio';
 import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Portfolio = () => {
+const useStyles = makeStyles((theme)=> ({
+  root: {
+    maxWidth: 345,
+  },
+  information:{
+    color: theme.palette.common.white
+  }
+}));
+
+const Portfolio:React.FC<{}> = () => {
   const lenguage = useSelector((state: LenguageState) => state.lenguage);
+  const classes = useStyles();
+  const navigate = useNavigate();
 
   return (
         <section id="portfolio">
-          <h5>{lenguage ? PortfolioData.title.es : PortfolioData.title.en}</h5>
-          <h2>{PortfolioData.subtitle}</h2>
+          <h5>{lenguage ? portfolioData.title.es : portfolioData.title.en}</h5>
+          <h2>{portfolioData.subtitle}</h2>
           <div className="container portfolio__container">
-          {SoloProjects.map(project => (
-              <article className="portfolio__item" key={project.id}>
-                <div className="portfolio__item-image">
-                  <img src={project.img} alt={project.title} />
-                </div>
-                <div className="portfolio__item-content">
-                  <h3>{project.title}</h3>
-                  <p>{lenguage ? project.description.es : project.description.en}</p>
-                  <p>{project.technologies}</p>
-                </div>
-                <div className="portfolio__item-cta">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="btn"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href={project.link ? project.link : "/error" }
-                    target={project.link ? "_blank" : undefined}
-                    className="btn btn-primary"
-                    rel="noreferrer"
-                  >
-                    {lenguage ? PortfolioData.button.es : PortfolioData.button.en}
-                  </a>
-                </div>
-              </article>
+          {soloProjects.map((project, index) => (
+            <Card className={classes.root} key={index} style={{ backgroundColor: '#2c2c6c'}}>
+              <CardActionArea onClick={()=> navigate(`/portfolio/${project.id}`)}>
+                <CardMedia
+                  component="img"
+                  alt={project.title}
+                  height="140"
+                  image={project.img}
+                  title={project.title}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2" className={classes.information}>
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" className={classes.information} component="p">
+                    {project.technologies}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
             ))}
           </div>
         </section>
