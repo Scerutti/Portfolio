@@ -1,20 +1,6 @@
-interface ExperienceDTO {
-    id: number;
-    name: string;
-}
+import { ExperienceDTO, ExperienceDataDTO } from "../../shared/interfaces"
 
-interface ExperienceDataDTO{
-    title:{
-        en: string;
-        es: string;
-    };
-    subtitle:{
-        en: string;
-        es: string;
-    };
-}
-
-const FrontEndExperience: ExperienceDTO[] = [
+const frontEndExperience: ExperienceDTO[] = [
     {
         id: 1,
         name: "HTML5"
@@ -41,7 +27,7 @@ const FrontEndExperience: ExperienceDTO[] = [
     }
 ]
 
-const BackEndExperience: ExperienceDTO[] = [
+const backEndExperience: ExperienceDTO[] = [
     {
         id: 1,
         name: "NodeJs"
@@ -64,7 +50,7 @@ const BackEndExperience: ExperienceDTO[] = [
     }
 ]
 
-const ExperienceData: ExperienceDataDTO = {
+const experienceData: ExperienceDataDTO = {
     title:{
         en: "The Skills I Have",
         es: "Mis",
@@ -76,7 +62,7 @@ const ExperienceData: ExperienceDataDTO = {
 }
 
 export {
-    FrontEndExperience,
-    BackEndExperience,
-    ExperienceData
+    frontEndExperience,
+    backEndExperience,
+    experienceData
 }

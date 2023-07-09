@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
-import { HeaderData } from './HeaderData';
+import { headerData } from './HeaderData';
 import { LenguageState } from '../../redux/reducer/types';
 
 import './header.css';
@@ -12,11 +12,11 @@ const Header = () => {
   return (
     <header id="home">
           <div className="container header__container">
-            <h5>{lenguage ? HeaderData.title.es : HeaderData.title.en}</h5>
-            <h1>{HeaderData.subtitle}</h1>
-            <h5 className="text-light">{HeaderData.rol}</h5>
+            <h5>{lenguage ? headerData.title.es : headerData.title.en}</h5>
+            <h1>{headerData.subtitle}</h1>
+            <h5 className="text-light">{headerData.rol}</h5>
             <CTA />
-            <a href="#contact" className="scroll__down">{lenguage ? HeaderData.endButton.es : HeaderData.endButton.en}</a>
+            <a href="#contact" className="scroll__down">{lenguage ? headerData.endButton.es : headerData.endButton.en}</a>
             <HeaderSocials />
           </div>
           

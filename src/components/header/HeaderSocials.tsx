@@ -5,7 +5,7 @@ import { IconType } from "react-icons"
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa'
-import { SocialsLinks } from './FullDataSocials';
+import { socialsLinks } from './FullDataSocials';
 
 const iconMap: Record<string, IconType> = {
   Github: FaGithub,
@@ -35,7 +35,7 @@ const HeaderSocials = () => {
     <div className="header__socials">
       <a href='#' onClick={(e) => handleLanguageChange(e.currentTarget.outerText)} title={!lenguage ? "Change Lenguage" : "Cambiar idioma"}>{!lenguage ? 'ESP' : 'ENG'}</a>
       {
-        SocialsLinks.map((social, index) => (
+        socialsLinks.map((social, index) => (
           <a href={social.link} target="_blank" rel='noreferrer' key={index + 123} title={social.title}>
             {getIcon(social.icon)}
           </a>

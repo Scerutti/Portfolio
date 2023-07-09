@@ -1,25 +1,7 @@
-interface HeaderDataDTO {
-    title: {
-        en: string,
-        es: string,
-    };
-    subtitle: string;
-    rol: string;
-    endButton: {
-        en: string,
-        es: string,
-    };
-    cv: {
-        en: string,
-        es: string,
-    };
-    contactButton: {
-        en: string,
-        es: string,
-    };
-}
+import { HeaderDataDTO } from "../../shared/interfaces";
 
-export const HeaderData: HeaderDataDTO = {
+
+export const headerData: HeaderDataDTO = {
     title: {
         en: "Hello i\'m",
         es: "Hola soy",

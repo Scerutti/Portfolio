@@ -1,7 +1,7 @@
 import { BsLinkedin } from 'react-icons/bs';
 import { Pagination, Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { TestimonialData, Testimonials } from './FullTestimonialsData';
+import { testimonialData, testimonials } from './FullTestimonialsData';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,8 +17,8 @@ const RecomendationCarrousel = () => {
 
   return (
         <section id="testimonials">
-          <h5>{lenguage ? TestimonialData.title.es : TestimonialData.title.en}</h5>
-          <h2>{lenguage ? TestimonialData.subtitle.es : TestimonialData.subtitle.en}</h2>
+          <h5>{lenguage ? testimonialData.title.es : testimonialData.title.en}</h5>
+          <h2>{lenguage ? testimonialData.subtitle.es : testimonialData.subtitle.en}</h2>
           <Swiper
             className="container testimonials__container"
             modules={[Pagination, Autoplay, Navigation]}
@@ -32,7 +32,7 @@ const RecomendationCarrousel = () => {
               disableOnInteraction: false,
             }}
           >
-            {Testimonials.map(recomendation => (
+            {testimonials.map(recomendation => (
               <SwiperSlide className="testimonial" key={recomendation.id}>
                 <div className="client__avatar">
                   <a href={recomendation.link} target='_blanck'>

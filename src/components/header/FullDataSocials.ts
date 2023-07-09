@@ -1,10 +1,7 @@
-interface SocialLinkDTO{
-    link: string;
-    icon: string;
-    title: string;
-}
+import { SocialLinkDTO } from "../../shared/interfaces";
 
-export const SocialsLinks: SocialLinkDTO[] = [
+
+export const socialsLinks: SocialLinkDTO[] = [
     {
         link: "https://www.linkedin.com/in/cerutti-sebastiáng/",
         icon: "Linkedin",

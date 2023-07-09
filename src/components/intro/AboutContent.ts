@@ -1,33 +1,7 @@
-interface Language {
-    title: {
-        en: string;
-        es: string;
-    };
-    subtitle:{
-        en: string;
-        es: string;
-    };
-    cards: {
-        title: {
-            en: string;
-            es: string;
-        };
-        subtitle: {
-            en: string;
-            es: string;
-        };
-    }[];
-    paragraph: {
-        en: string;
-        es: string;
-    };
-    button: {
-        en: string;
-        es: string;
-    };
-};
+import { Language } from "../../shared/interfaces";
 
-export const AboutContent: Language = {
+
+export const aboutContent: Language = {
     title:{
         en: "Get to know",
         es: "Conozca",
