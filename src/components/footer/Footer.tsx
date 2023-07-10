@@ -1,6 +1,5 @@
 import { BsLinkedin } from 'react-icons/bs';
-import { FaGithub } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
 import FooterData from './FooterData';
