@@ -12,5 +12,3 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </Provider>
   </StrictMode>
 );
-
-console.log(document.getElementById("root"))

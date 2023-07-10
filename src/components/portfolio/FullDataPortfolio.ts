@@ -7,8 +7,8 @@ import IMG6 from'../../assets/rest-api-nestjs.png';
 import IMG7 from'../../assets/weatherBot.png';
 import IMG8 from '../../assets/formulario-taller.png'
 
-interface PryectsDTO {
-    id: number;
+export interface ProyectsDTO {
+    id: string;
     title: string;
     img: string;
     description:{
@@ -20,7 +20,7 @@ interface PryectsDTO {
     github: string;
 }
 
-interface PortfolioDataDTO {
+export interface PortfolioDataDTO {
     title:{
         en: string;
         es: string;
@@ -30,11 +30,15 @@ interface PortfolioDataDTO {
         en: string;
         es: string;
     };
+    verMas: {
+        en: string;
+        es: string;
+    };
 }
 
-export const SoloProjects: PryectsDTO[] = [
+export const SoloProjects: ProyectsDTO[] = [
     {
-        id: 1,
+        id: "1",
         title: 'Doogies Page',
         img: IMG1,
         description:{
@@ -45,7 +49,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/Dogs-API-Deployment',
     },
     {
-        id: 2,
+        id: "2",
         title: 'Formulario taller',
         img: IMG8,
         description:{
@@ -57,7 +61,7 @@ export const SoloProjects: PryectsDTO[] = [
         link: "https://invitacion-one.vercel.app/"
     },
     {
-        id: 3,
+        id: "3",
         title: 'Weather Discord Bot',
         img: IMG7,
         description:{
@@ -68,7 +72,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://gitlab.com/sebacerutti/weatherbotds',
     },
     {
-        id: 4,
+        id: "4",
         title: 'Rest-API with Nest.JS',
         img: IMG6,
         description:{
@@ -79,7 +83,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/rest-api-nest',
     },
     {
-        id: 5,
+        id: "5",
         title: 'Chuck Norris Jokes',
         img: IMG5,
         description:{
@@ -91,7 +95,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/chuck-norris-jokes',
     },
     {
-        id: 6,
+        id: "6",
         title: 'E-commerce App',
         img: IMG3,
         description:{
@@ -102,7 +106,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/federicoacuna/soyHenryWebFT23b-G01-PF',
     },
     {
-        id: 7,
+        id: "7",
         title: 'Task List App',
         img: IMG4,
         description:{
@@ -114,7 +118,7 @@ export const SoloProjects: PryectsDTO[] = [
         github: 'https://github.com/Scerutti/TaskList-complete',
     },
     {
-        id: 8,
+        id: "8",
         title: 'Rick & Morty SPA',
         img: IMG2,
         description:{
@@ -136,5 +140,9 @@ export const PortfolioData: PortfolioDataDTO = {
     button:{
         en: "Live Demo",
         es: "Demo",
+    },
+    verMas:{
+        en: "Learn More",
+        es: "Ver mas",
     }
 }

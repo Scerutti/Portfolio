@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CompletePage from './pages/complete-page/CompletePage';
 import Error from './pages/error/Error';
 import ErrorPage from './pages/error/ErrorPage';
-import CardContent from './pages/card-content/CardContent';
+import CardConteiner from './pages/card-content/CardConteiner';
+
 
 
 const App:React.FC<{}> = () => {
@@ -11,7 +12,7 @@ const App:React.FC<{}> = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CompletePage />} />
-        <Route path="/portfolio/:id" element={<CardContent/>}/>
+        <Route path="/portfolio/:id" element={<CardConteiner/>}/>
         <Route path='/error' element={<Error />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>

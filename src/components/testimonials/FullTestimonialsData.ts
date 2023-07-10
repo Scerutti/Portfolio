@@ -62,7 +62,7 @@ const Testimonials: TestimonialsDTO[] = [
         },
     },
     {
-        id: 4,
+        id: 5,
         link: 'https://www.linkedin.com/in/santiago-bonetto/',
         name: 'Santiago Bonetto',
         role: 'Full-Stack web developer | JavaScript | Typescript | HTML | CSS | React | Redux | Node | Express | Sequelize & SQL',
@@ -72,7 +72,7 @@ const Testimonials: TestimonialsDTO[] = [
         },
     },
     {
-        id: 5,
+        id: 6,
         link: 'https://www.linkedin.com/in/salvador-armanasco-catalin/',
         name: 'Salvador Armanasco Catalin',
         role: 'Full Stack Developer| React | Redux | Javascript | PostgresSQL | Sequelize | NodeJs | Express | MaterialUI | React Native | Typescript',
