@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CompletePage from './pages/complete-page/CompletePage';
 import Error from './pages/error/Error';
@@ -6,7 +5,7 @@ import ErrorPage from './pages/error/ErrorPage';
 import CardContainer from './pages/card-container/CardContainer';
 
 
-const App:React.FC<{}> = () => {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>

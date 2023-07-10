@@ -21,6 +21,9 @@ package-lock.json
 .env.test.local
 .env.production.local
 
+
+*.tsbuildinfo
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
