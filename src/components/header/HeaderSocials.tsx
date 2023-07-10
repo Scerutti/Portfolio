@@ -3,8 +3,7 @@ import { changeLenguage } from '../../redux/actions/index'
 import { LenguageState } from '../../redux/reducer/types';
 import { IconType } from "react-icons"
 import { BsLinkedin } from 'react-icons/bs';
-import { FaGithub } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram} from 'react-icons/fa';
 import { SocialsLinks } from './FullDataSocials';
 
 const iconMap: Record<string, IconType> = {

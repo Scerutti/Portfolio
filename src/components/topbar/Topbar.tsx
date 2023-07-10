@@ -1,10 +1,7 @@
 import React from 'react';
-import { AiOutlineHome } from 'react-icons/ai';
-import { AiOutlineUser } from 'react-icons/ai';
-import { BiBook } from 'react-icons/bi';
+import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
+import { BiBook, BiMessageSquareDetail, BiAlignJustify } from 'react-icons/bi';
 import { RiServiceLine } from 'react-icons/ri';
-import { BiMessageSquareDetail } from 'react-icons/bi';
-import { BiAlignJustify } from "react-icons/bi"
 import './topbar.css';
 
 const Topbar = () => {
@@ -33,7 +30,7 @@ const Topbar = () => {
         setActiveNav("#testimonials");
       } else {
         setActiveNav('#contact');
-      };
+      }
     };
 
     window.addEventListener("scroll", handleScroll);

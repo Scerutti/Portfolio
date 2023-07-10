@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],  
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-async-promise-executor": "off",
+    "no-case-declarations": "off",
+    "no-unsafe-optional-chaining": "off",
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "no-mixed-spaces-and-tabs": "off",
+    "array-callback-return": ["error"],
+    "max-params": ["error", 7],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {"argsIgnorePattern": "_"} ],
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-duplicate-imports": ["error"],
+    "no-unneeded-ternary": ["error", {"defaultAssignment" : false}],
+    "no-nested-ternary": "error",
+    "complexity": ["error", 100],
+    "no-restricted-syntax": [
+      "error",
+       {
+          "selector": "BinaryExpression[operator=/^(==|===|!=|!==)$/][left.raw=/^(true|false)$/], BinaryExpression[operator=/^(==|===|!=|!==)$/][right.raw=/^(true|false)$/]",
+          "message": "Don't compare for equality against boolean literals"
+       }
+    ]
+  }
+}
