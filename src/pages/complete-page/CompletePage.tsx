@@ -6,9 +6,8 @@ import Portfolio from '../../components/portfolio/Portfolio';
 import Testimonials from '../../components/testimonials/Testimonials';
 import Header from '../../components/header/Header';
 import Topbar from '../../components/topbar/Topbar';
-import React from 'react';
 
-const CompletePage: React.FC<{}> = () => {
+const CompletePage = () => {
     return (
         <>
             <Header />
