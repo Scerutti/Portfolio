@@ -11,8 +11,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<CompletePage />} />
         <Route path='/portfolio/:id' element={<CardContainer />} />
-        <Route path='/error' element={<Error />} />
-        <Route path='*' element={<ErrorPage />} />
+        {/* <Route path='/error' element={<Error />} />
+        <Route path='*' element={<ErrorPage />} /> */}
       </Routes>
     </BrowserRouter>
   )
