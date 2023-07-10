@@ -45,9 +45,7 @@ const useCardContainerStyle = makeStyles((theme) => ({
 }));
 
 
-interface CardsContainerProps {}
-
-const CardContainer: React.FC<CardsContainerProps> = (_props: CardsContainerProps) => {
+const CardContainer = () => {
     const lenguage = useSelector((state: LenguageState) => state.lenguage);
     const classes = useCardContainerStyle();
     const navigate = useNavigate();
