@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Container, Grid } from '@material-ui/core'
+import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons'
 
 const Error = () => {
