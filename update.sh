@@ -4,7 +4,7 @@
 rimraf node_modules
 
 # Update dependencies
-pnpm update
+npm update
 
 # install dependencies
-pnpm install
+npm install
