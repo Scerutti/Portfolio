@@ -4,18 +4,17 @@ import Error from './pages/error/Error';
 import ErrorPage from './pages/error/ErrorPage';
 import CardContainer from './pages/card-container/CardContainer';
 
-
-function App(){
+function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CompletePage />} />
-        <Route path='/portfolio/:id' element={<CardContainer />} />
-        <Route path='/error' element={<Error />} />
-        <Route path='*' element={<ErrorPage />} />
+        <Route path="/portfolio/:id" element={<CardContainer />} />
+        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
