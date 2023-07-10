@@ -1,10 +1,10 @@
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
+import { Button, Container, Grid, Typography } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons'
 
 const Error = () => {
     return (
         <Container maxWidth="sm">
-            <Box textAlign="center" mt={10}>
+            {/* <Box textAlign="center" mt={10}> */}
                 <Typography variant="h2" color='error' style={{ textAlign: 'center' }}>
                     Error 503
                 </Typography>
@@ -27,7 +27,7 @@ const Error = () => {
                         </Button>
                     </Grid>
                 </Grid>
-            </Box>
+            {/* </Box> */}
         </Container>
     )
 }

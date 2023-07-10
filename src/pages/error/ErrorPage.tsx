@@ -1,10 +1,10 @@
-import { Box, Typography, Button, Container, Grid } from '@material-ui/core'
+import { Typography, Button, Container, Grid } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
 
 const ErrorPage = () => {
     return (
         <Container maxWidth="sm">
-            <Box textAlign="center" mt={10}>
+            {/* <Box textAlign="center" mt={10}> */}
                 <Typography variant="h2" color='error' style={{ textAlign: 'center' }}>
                     Error 404
                 </Typography>
@@ -26,7 +26,7 @@ const ErrorPage = () => {
                         </Button>
                     </Grid>
                 </Grid>
-            </Box>
+            {/* </Box> */}
         </Container>
     )
 }
