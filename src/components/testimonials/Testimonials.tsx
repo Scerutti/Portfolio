@@ -1,7 +1,9 @@
-import { BsLinkedin } from 'react-icons/bs';
 import { Pagination, Autoplay, Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { TestimonialData, Testimonials } from './FullTestimonialsData';
+import { useSelector } from 'react-redux';
+import { LenguageState } from '../../redux/reducer/types';
+import { Box, Card, CardContent, CardHeader, Typography, makeStyles } from '@material-ui/core';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -9,18 +11,64 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './testimonials.css';
-import { useSelector } from 'react-redux';
-import { LenguageState } from '../../redux/reducer/types';
+import clsx from 'clsx';
+import { Link } from 'react-router-dom';
+
+
+const useStyles = makeStyles((theme)=>({
+  container:{ marginTop: theme.spacing(16) },
+  typographyRoot: { fontWeight: 500 },
+  textColor:{ color: theme.palette.common.white},
+  title:{
+    color: "rgba(255, 255, 255, 0.6)",
+    textAlign: "center"
+  },
+  subtitle:{
+    textAlign: "center",
+    marginBottom: theme.spacing(3),
+    color: "#4db5ff"
+  },
+  swipperConteiner:{
+    width: "var(--container-width-lg)",
+    margin: "0 auto"
+  },
+  swipperStyle:{
+    width: "40%",
+    height: 440,
+    paddingBottom: theme.spacing(8)
+  },
+  card: {
+    background: 'var(--color-bg-variant)',
+    textAlign: 'center',
+    padding: theme.spacing(2),
+    borderRadius: theme.spacing(2),
+    userSelect: 'none',
+    boxShadow: "unset"
+  },
+  avatar: {
+    width: theme.spacing(8),
+    height: theme.spacing(8),
+    borderRadius: '50%',
+  },
+  review: {
+    color: 'var(--color-light)',
+    fontWeight: 300,
+    display: 'block',
+    width: '90%',
+    margin: '0.8rem auto 0',
+  },
+}))
 
 const RecomendationCarrousel = () => {
+  const classes = useStyles();
   const lenguage = useSelector((state: LenguageState) => state.lenguage);
 
   return (
-        <section id="testimonials">
-          <h5>{lenguage ? TestimonialData.title.es : TestimonialData.title.en}</h5>
-          <h2>{lenguage ? TestimonialData.subtitle.es : TestimonialData.subtitle.en}</h2>
+        <Box id="testimonials" component={"section"} className={classes.container}>
+          <Typography variant='subtitle1' className={clsx(classes.typographyRoot, classes.title)}>{lenguage ? TestimonialData.title.es : TestimonialData.title.en}</Typography>
+          <Typography variant='h5' className={clsx(classes.typographyRoot, classes.subtitle)}>{lenguage ? TestimonialData.subtitle.es : TestimonialData.subtitle.en}</Typography>
           <Swiper
-            className="container testimonials__container"
+            className={clsx(classes.swipperConteiner, classes.swipperStyle)}
             modules={[Pagination, Autoplay, Navigation]}
             spaceBetween={40}
             slidesPerView={1}
@@ -34,17 +82,27 @@ const RecomendationCarrousel = () => {
           >
             {Testimonials.map(recomendation => (
               <SwiperSlide className="testimonial" key={recomendation.id}>
-                <div className="client__avatar">
-                  <a href={recomendation.link} target='_blanck'>
-                    <BsLinkedin />
-                  </a>
-                </div>
-                <h5 className='client__name'>{recomendation.name}</h5>
-                <small className="client__review">{lenguage ? recomendation.test.es : recomendation.test.en}</small>
+                <Card className={classes.card}>
+                  <CardHeader
+                    avatar={
+                      <Box className={classes.avatar}>
+                        <Link to={recomendation.link} target='_blank' >
+                          <img src={recomendation.avatar} alt={recomendation.name} className={classes.avatar} />
+                        </Link>
+                      </Box>
+                    }
+                    title={<Typography variant='subtitle1' className={clsx(classes.typographyRoot, classes.textColor)}>{recomendation.name}</Typography>}
+                  />
+                  <CardContent>
+                    <Typography variant="body2" className={classes.review}>
+                      {lenguage ? recomendation.test.es : recomendation.test.en}
+                    </Typography>
+                  </CardContent>
+                </Card>
               </SwiperSlide>
             ))}
           </Swiper>
-        </section>
+        </Box>
   )
 }
 
