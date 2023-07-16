@@ -85,8 +85,8 @@ const RecomendationCarrousel = () => {
                 <Card className={classes.card}>
                   <CardHeader
                     avatar={
-                      <Box className={classes.avatar}>
-                        <Link to={recomendation.link} target='_blank' >
+                      <Box data-testid={`avatar`} className={classes.avatar} >
+                        <Link to={recomendation.link} target='_blank' data-testid={`linkedin-link`} >
                           <img src={recomendation.avatar} alt={recomendation.name} className={classes.avatar} />
                         </Link>
                       </Box>
@@ -94,7 +94,7 @@ const RecomendationCarrousel = () => {
                     title={<Typography variant='subtitle1' className={clsx(classes.typographyRoot, classes.textColor)}>{recomendation.name}</Typography>}
                   />
                   <CardContent>
-                    <Typography variant="body2" className={classes.review}>
+                    <Typography variant="body2" className={classes.review} data-testid={`testimonial-text`}>
                       {lenguage ? recomendation.test.es : recomendation.test.en}
                     </Typography>
                   </CardContent>
