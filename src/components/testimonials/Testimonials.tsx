@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme)=>({
   },
   swipperStyle:{
     width: "40%",
-    height: 440,
+    height: 450,
     paddingBottom: theme.spacing(8)
   },
   card: {
