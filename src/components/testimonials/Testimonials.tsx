@@ -2,7 +2,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper';
 import { TestimonialData, Testimonials } from './FullTestimonialsData';
 import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
-import { Box, Card, CardContent, CardHeader, Typography, makeStyles } from '@material-ui/core';
+import { Box, Card, CardContent, CardHeader, Typography, makeStyles, useTheme } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -13,6 +13,8 @@ import 'swiper/css/scrollbar';
 import './testimonials.css';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
+import { useWindowSize } from '../../shared/size-hook';
+import { parseNumber } from '../../shared/parse-number';
 
 
 const useStyles = makeStyles((theme)=>({
@@ -43,7 +45,8 @@ const useStyles = makeStyles((theme)=>({
     padding: theme.spacing(2),
     borderRadius: theme.spacing(2),
     userSelect: 'none',
-    boxShadow: "unset"
+    boxShadow: "unset",
+    height: "auto%"
   },
   avatar: {
     width: theme.spacing(8),
@@ -55,13 +58,26 @@ const useStyles = makeStyles((theme)=>({
     fontWeight: 300,
     display: 'block',
     width: '90%',
-    margin: '0.8rem auto 0',
+    padding: theme.spacing(0,1,1,1),
+    margin: '0.8rem auto 0'
   },
 }))
 
 const RecomendationCarrousel = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const windowSize = useWindowSize();
   const lenguage = useSelector((state: LenguageState) => state.lenguage);
+
+  const truncateTestimonial = (testimonial: string, maxLength: number):string =>{
+    if(testimonial.length > maxLength && (parseNumber(windowSize?.width) <= parseNumber(theme.breakpoints.values.md))){
+      return testimonial.substring(0, maxLength) + "...";
+    }
+    return testimonial;
+  }
+  
+
+  const paginado = parseNumber(windowSize?.width) >= parseNumber(theme.breakpoints.values.md)
 
   return (
         <Box id="testimonials" component={"section"} className={classes.container}>
@@ -73,8 +89,9 @@ const RecomendationCarrousel = () => {
             spaceBetween={40}
             slidesPerView={1}
             centeredSlides={true}
-            pagination={{ clickable: true }}
-            navigation={true}
+            pagination={paginado}
+            autoHeight
+            navigation={parseNumber(windowSize?.width) >= parseNumber(theme.breakpoints.values.md)}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -95,7 +112,7 @@ const RecomendationCarrousel = () => {
                   />
                   <CardContent>
                     <Typography variant="body2" className={classes.review} data-testid={`testimonial-text`}>
-                      {lenguage ? recomendation.test.es : recomendation.test.en}
+                      {lenguage ? truncateTestimonial(recomendation.test.es, 250) : truncateTestimonial(recomendation.test.en,150)}
                     </Typography>
                   </CardContent>
                 </Card>
