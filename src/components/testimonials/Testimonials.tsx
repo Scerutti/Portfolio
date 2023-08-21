@@ -46,7 +46,6 @@ const useStyles = makeStyles((theme)=>({
     borderRadius: theme.spacing(2),
     userSelect: 'none',
     boxShadow: "unset",
-    height: "auto%"
   },
   avatar: {
     width: theme.spacing(8),
