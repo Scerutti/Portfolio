@@ -60,7 +60,7 @@ const CardContainer = () => {
   }, []);
 
   return (
-    <>
+    <div role='project-detail'>
       {project && (
         <Grid container style={{ marginTop: 32, height: '80vh' }}>
           <Grid item xs={12} md={10} style={{ backgroundColor: '#1f1f30', margin: '0 auto' }}>
@@ -121,7 +121,7 @@ const CardContainer = () => {
           </Grid>
         </Grid>
       )}
-    </>
+    </div>
   );
 };
 
