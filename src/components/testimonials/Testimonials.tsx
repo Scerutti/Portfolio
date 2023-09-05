@@ -4,6 +4,10 @@ import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
 import { Box, Card, CardContent, CardHeader, Typography, makeStyles, useTheme } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
+import { useWindowSize } from '../../shared/size-hook';
+import { parseNumber } from '../../shared/parse-number';
+import clsx from 'clsx';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,10 +15,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './testimonials.css';
-import clsx from 'clsx';
-import { Link } from 'react-router-dom';
-import { useWindowSize } from '../../shared/size-hook';
-import { parseNumber } from '../../shared/parse-number';
 
 
 const useStyles = makeStyles((theme)=>({

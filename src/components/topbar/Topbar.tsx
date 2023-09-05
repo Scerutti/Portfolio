@@ -1,12 +1,39 @@
 import React from 'react';
-import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
-import { BiBook, BiMessageSquareDetail, BiAlignJustify } from 'react-icons/bi';
-import { RiServiceLine } from 'react-icons/ri';
-import './topbar.css';
+// import './topbar.css';
+import { BottomNavigation, BottomNavigationAction, makeStyles } from '@material-ui/core';
+import { HomeOutlined, PersonOutlined, BookOutlined, MessageOutlined, FormatAlignJustifyOutlined, AssignmentOutlined } from '@material-ui/icons';
+
+const useStyles = makeStyles((theme) => ({
+  bottomNav: {
+    background: 'rgba(0, 0, 0, 0.3)',
+    backdropFilter: 'blur(15px)',
+    position: 'fixed',
+    bottom: '2rem',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    borderRadius: '3rem',
+    zIndex: 2,
+    [theme.breakpoints.down("sm")]:{
+      display: "none"
+    }
+  },
+  icon: {
+    color: theme.palette.common.white,
+  },
+  activeIcon: {
+    color: theme.palette.common.white,
+  },
+  hiddeButton:{
+    [theme.breakpoints.down("sm")]:{
+      display:"none"
+    }
+  }
+}));
+
 
 const Topbar = () => {
+  const classes = useStyles();
   const [activeNav, setActiveNav] = React.useState('#home');
-
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -42,14 +69,14 @@ const Topbar = () => {
   }, []);
 
   return (
-    <nav>
-      <a href="#home" onClick={() => setActiveNav('#home')} className={activeNav === '#home' ? 'active' : ''}><AiOutlineHome /></a>
-      <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser /></a>
-      <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><BiBook /></a>
-      <a href="#portfolio" onClick={() => setActiveNav('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''}><RiServiceLine /></a>
-      <a href="#testimonials" onClick={() => setActiveNav('#testimonials')} className={activeNav === '#testimonials' ? 'active' : ''} ><BiAlignJustify /></a>
-      <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
-    </nav>
+    <BottomNavigation value={activeNav} showLabels className={classes.bottomNav}>
+      <BottomNavigationAction value="#home" icon={<HomeOutlined />} onClick={() => setActiveNav('#home')} classes={{ root: classes.icon, selected: classes.activeIcon }} href='#home'/>
+      <BottomNavigationAction value="#about" icon={<PersonOutlined />} onClick={() => setActiveNav('#about')} classes={{ root: classes.icon, selected: classes.activeIcon }} href='#about' />
+      <BottomNavigationAction value="#experience" icon={<BookOutlined />} onClick={() => setActiveNav('#experience')} classes={{ root: classes.icon, selected: classes.activeIcon }}href="#experience" />
+      <BottomNavigationAction value="#portfolio" icon={<AssignmentOutlined />} onClick={() => setActiveNav('#portfolio')} classes={{ root: classes.icon, selected: classes.activeIcon }} href="#portfolio" />
+      <BottomNavigationAction value="#testimonials" icon={<FormatAlignJustifyOutlined />} onClick={() => setActiveNav('#testimonials')} classes={{ root: classes.icon, selected: classes.activeIcon }} className={classes.hiddeButton} href="#testimonials" />
+      <BottomNavigationAction value="#contact" icon={<MessageOutlined />} onClick={() => setActiveNav('#contact')} classes={{ root: classes.icon, selected: classes.activeIcon }} href="#contact" />
+    </BottomNavigation>
   )
 }
 
