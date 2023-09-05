@@ -4,6 +4,10 @@ import { useSelector } from 'react-redux';
 import { LenguageState } from '../../redux/reducer/types';
 import { Box, Card, CardContent, CardHeader, Typography, makeStyles, useTheme } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
+import { useWindowSize } from '../../shared/size-hook';
+import { parseNumber } from '../../shared/parse-number';
+import clsx from 'clsx';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,10 +15,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './testimonials.css';
-import clsx from 'clsx';
-import { Link } from 'react-router-dom';
-import { useWindowSize } from '../../shared/size-hook';
-import { parseNumber } from '../../shared/parse-number';
 
 
 const useStyles = makeStyles((theme)=>({
@@ -23,16 +23,25 @@ const useStyles = makeStyles((theme)=>({
   textColor:{ color: theme.palette.common.white},
   title:{
     color: "rgba(255, 255, 255, 0.6)",
-    textAlign: "center"
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]:{
+      display:"none"
+    }
   },
   subtitle:{
     textAlign: "center",
     marginBottom: theme.spacing(3),
-    color: "#4db5ff"
+    color: "#4db5ff",
+    [theme.breakpoints.down("sm")]:{
+      display:"none"
+    }
   },
   swipperConteiner:{
     width: "var(--container-width-lg)",
-    margin: "0 auto"
+    margin: "0 auto",
+    [theme.breakpoints.down("sm")]:{
+      display:"none"
+    }
   },
   swipperStyle:{
     width: "40%",
@@ -74,7 +83,6 @@ const RecomendationCarrousel = () => {
     }
     return testimonial;
   }
-  
 
   const paginado = parseNumber(windowSize?.width) >= parseNumber(theme.breakpoints.values.md)
 
